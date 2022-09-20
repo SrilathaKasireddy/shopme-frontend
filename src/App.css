@@ -1,38 +1,84 @@
-.App {
+#container-main{
+  margin-top:20px
+}
+#container-main {
+     transition: width 2s;
+}
+
+.center{
   text-align: center;
+display: block;
+justify-content: center;
+align-items: center;
+margin: auto;
+width: 50%;
+}
+.Credentials{
+
+  width:100%;
+  margin:3%;
+  font-size:20px;
+  height:80px;
+  
+  
+ 
+
+}
+#comment{
+font-family:'Times New Roman', Times, serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container-main:hover {
+ 
+  transform: scale(1.03);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.itemDescription{
+  font-size:15px;
+  font-family:"roboto"
+}
+#breakfast{
+  
+font-size: 20px;
+border:5px solid green;
+border-style: dotted;
+/* padding:10px; */
+margin: 30%;
+  
+}
+h4{
+  color:green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#leftbox {
+  float:left; 
+  background:#caf6f2;
+  width:35%;
+  padding:10px;
+  margin:10px;
+
 }
 
-.App-link {
-  color: #61dafb;
+#card{
+  background-image:url(./background.jpg);
+  
+}
+.wave {
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) } 
+  100% { transform: rotate( 0.0deg) }
 }
