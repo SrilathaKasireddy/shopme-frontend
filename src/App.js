@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from "./Components/Navbar/Navbar"
+import NavBar from "./Components/Navbar/LandingPage"
 import {Routes,Route }from "react-router-dom"
 import {Contactus} from "./contactus"
 import NotFound from "./NotFound"
@@ -8,6 +8,9 @@ import {Register} from "./Register";
 import {ForgetPassword} from "./ForgetPassword";
 import {PasswordUpdated} from "./PasswordUpdated"
 import  {ChangePassword} from "./ChangePassword";
+import LatestClothing from "./latestcloths"
+import LandingPage from "./Components/Navbar/LandingPage"
+import LatestClothesDetails from "./latestclothesdetails"
 
 
 function App() {
@@ -15,9 +18,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        
+      <Route path="/latestcollection/:id" element={<LatestClothesDetails />} />
         <Route path="/contactus" element={<Contactus />} />
-        <Route path="/home" element={<NavBar />} />
+        <Route path="/home" element={<LandingPage />} />
+        <Route path ="/latestcollection" element={<LatestClothing/>}/>
         <Route path="*" element={<NotFound />} /> 
         <Route path="/" element={<Login />} /> 
         <Route path="/Register" element={<Register />} />

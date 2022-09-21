@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-function NavBar() {  
+function LandingPage() {  
   return (  
     <div className="App">
       <header className="App-header">
@@ -30,8 +30,8 @@ function NavBar() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="dropdown"  >
                 <NavDropdown title="Clothing" className="hover-underline-animation">
-                  <NavDropdown.Item href="/items" >Tops</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Dresses</NavDropdown.Item>
+                  <NavDropdown.Item href="/latestcollection" >New Collection</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Best Selling</NavDropdown.Item>
                   
                 </NavDropdown>
                 <NavDropdown title="Shoes" id="nav-dropdown" className="hover-underline-animation">
@@ -94,4 +94,4 @@ function NavBar() {
     </div>
   );  
 }  
-export default NavBar;  
+export default LandingPage;  

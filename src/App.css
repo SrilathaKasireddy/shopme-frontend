@@ -1,5 +1,6 @@
 #container-main{
-  margin-top:20px
+  margin-top:20px;
+  
 }
 #container-main {
      transition: width 2s;
@@ -27,10 +28,23 @@ width: 50%;
 #comment{
 font-family:'Times New Roman', Times, serif
 }
+.itemsList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+ 
+  
+}
+#heading-item{
+  background-color: rgb(12, 12, 12);
+}
 
 #container-main:hover {
  
   transform: scale(1.03);
+  box-shadow: 10px 10px 10px gray;
+  
+
 }
 
 
