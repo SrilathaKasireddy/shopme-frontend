@@ -14,8 +14,8 @@ export function Latestclothscard({ img, name, id,_id, getItemAPI,price }) {
   const [token, setToken] = useState(localStorage.getItem("token"));
   return (
     <div id="container-main" style={{ display: "flex", 
-    flexWrap: "wrap" ,margin: 10, width: 350 
-    ,display: "flex", flexWrap: "wrap", 
+    flexWrap: "wrap" ,margin: 10, width: 450 
+    ,
     textAlign: "center", 
     justifyContent: "center"}}>
       {/* <Card   style={{ margin: 10, width: 350 

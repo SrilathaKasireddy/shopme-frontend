@@ -24,6 +24,7 @@ export default function Login() {
     }).then((data) => data.json())
       .then((data1) => {
         localStorage.setItem("token", data1.token)
+        localStorage.setItem('token', Date.now() + 2 * 60 * 60 * 1000);
         if (data1.message === "successful login") {
           entry();
         }

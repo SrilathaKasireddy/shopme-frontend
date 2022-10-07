@@ -32,11 +32,14 @@ font-family:'Times New Roman', Times, serif
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+  
  
   
 }
 #heading-item{
   background-color: rgb(12, 12, 12);
+  min-height:100vh;
+  min-width: none;
 }
 
 #container-main:hover {

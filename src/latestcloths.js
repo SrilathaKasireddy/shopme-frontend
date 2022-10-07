@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import AddIcon from '@mui/icons-material/Add';
 import React  from 'react';
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function LatestClothing() {
   const [itemInfo, setitemInfo] = useState([]);
@@ -79,17 +80,20 @@ export default function LatestClothing() {
         }}
         > 
          <AddIcon />AddItem</Button> */}
+         
         <input
           type="search"
+          // startIcon={<SearchIcon style={{color:"white"}}/>}
           value={item}
           onChange={filter}
           className="input"
           placeholder="Search..."
           style={{
-            marginRight: "80%", width: "250px", height: 40,
-            border: "3px solid green"
+             width: "250px", height: 40,
+            marginTop:"20px",marginLeft:"70%"
           }}
         />
+        
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {foundItems && foundItems.length > 0 ? (
             foundItems.map((item) => (
@@ -102,7 +106,7 @@ export default function LatestClothing() {
                 getItemAPI={getItemAPI} />
             ))
           ) : (
-             <div className="itemsList" id="heading-item" >
+             <div className="itemsList"  >
         {itemInfo.map((ele, index) => <Latestclothscard
          key={index} img={ele.image} name={ele.name} id ={ele._id}
           price={ele.price} rating={ele.rating} />)}

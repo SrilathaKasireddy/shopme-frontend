@@ -7,15 +7,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import * as React from 'react';
 import "./Navbar.css"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function LandingPage() {  
+  const navigate = useNavigate();
   return (  
     <div className="App">
       <header className="App-header">
@@ -48,7 +51,8 @@ function LandingPage() {
 
               </Nav>
             </Navbar.Collapse>
-
+            
+            
             <h6> <AccountCircleIcon style={{ margin: "1%", color: "black" }} />
             {/* {`${Username}`} */}
             </h6>
@@ -71,7 +75,8 @@ function LandingPage() {
           <div  id ="background">
           <h1 style={{marginRight:"70%",paddingTop:"5%"}}>Now Open in New York!</h1>
           <br/>
-         <button style={{marginRight:"70%",color:"white",padding:10,
+         <button onClick={()=>navigate("/latestcollection")}
+         style={{marginRight:"70%",color:"white",padding:10,
          backgroundColor:"black",boxShadow:" 10px 10px 5px  grey"}}>Shop The New Arrivals</button>
           </div>
           
